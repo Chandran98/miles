@@ -14,11 +14,6 @@ class MainDashboard extends StatefulWidget {
 
 class _MainDashboardState extends State<MainDashboard> {
 
-    @override
-  void initState() {
-    load();
-    super.initState();
-  }
 
   load() {
     context.read<DataBloc>().add(GetHomeData());

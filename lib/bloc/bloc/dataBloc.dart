@@ -7,6 +7,7 @@ import 'package:milesed/bloc/state/dataState.dart';
 import 'package:milesed/model/homedataModel.dart';
 import 'package:milesed/model/testimonialModel.dart';
 
+/// home page Data are loaded & its business logic
 class DataBloc extends Bloc<DataEvent, DataState> {
   DataBloc() : super(HomeDataInit()) {
     on<GetHomeData>((event, emit) async {
@@ -25,7 +26,7 @@ class DataBloc extends Bloc<DataEvent, DataState> {
     });
   }
 }
-
+/// Testimonial data are loaded & its business logic
 class TestimonialDataBloc extends Bloc<DataEvent, DataState> {
   TestimonialDataBloc() : super(TestimonialDataInit()) {
     on<GetTestimonialData>((event, emit) async {

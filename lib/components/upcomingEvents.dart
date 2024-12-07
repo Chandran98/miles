@@ -8,6 +8,8 @@ import 'package:sizer/sizer.dart';
 
 import '../bloc/bloc/dataBloc.dart';
 
+/// upcoming events 
+
 class UpcomingEventsComponent extends StatefulWidget {
   const UpcomingEventsComponent({super.key});
 

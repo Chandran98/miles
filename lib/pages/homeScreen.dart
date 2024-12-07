@@ -33,7 +33,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<DataBloc>(context);
 
     return Scaffold(
         appBar: AppBar(

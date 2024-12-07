@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:milesed/constant/constant.dart';
 import 'package:sizer/sizer.dart';
 
+
+/// Footer content
+
 class FooterContent extends StatelessWidget {
   const FooterContent({super.key});
 

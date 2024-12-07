@@ -8,6 +8,8 @@ import 'package:sizer/sizer.dart';
 
 import '../bloc/bloc/dataBloc.dart';
 
+/// Our program
+
 class OurProgramComponent extends StatefulWidget {
   const OurProgramComponent({super.key});
 
