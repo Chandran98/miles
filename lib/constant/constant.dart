@@ -21,8 +21,8 @@ var spacer50Height = SizedBox(height: 6.h);
 
 // Width
 
-var spacer2WidthD= SizedBox(width: 2.5.w);
-var spacer5WidthD= SizedBox(width: 5.w);
+var spacer2WidthD = SizedBox(width: 2.5.w);
+var spacer5WidthD = SizedBox(width: 5.w);
 var spacer10WidthD = SizedBox(width: 10.w);
 var spacer20WidthD = SizedBox(width: 20.w);
 var spacer30WidthD = SizedBox(width: 30.w);
@@ -30,6 +30,14 @@ var spacer40WidthD = SizedBox(width: 40.w);
 var spacer50WidthD = SizedBox(width: 50.w);
 
 
+extractYouTubeId(url) {
+  final regExp = RegExp(
+    r'(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})',
+    caseSensitive: false,
+  );
+  final match = regExp.firstMatch(url);
+  return match?.group(1);
+}
 
 
 ThemeData dark = ThemeData(
@@ -91,7 +99,6 @@ ThemeData dark = ThemeData(
   ),
 );
 
-
 class Dimensions {
   static const double FONT_SIZE_EXTRA_SMALL = 10.0;
   static const double FONT_SIZE_SMALL = 12.0;
@@ -116,4 +123,3 @@ class Dimensions {
   static const double WEB_SCREEN_WIDTH = 1170;
   static const int MESSAGE_INPUT_LENGTH = 250;
 }
-

@@ -1,39 +1,41 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:milesed/bloc/event/dataEvent.dart';
 import 'package:milesed/bloc/state/dataState.dart';
 import 'package:milesed/model/homedataModel.dart';
 import 'package:milesed/model/testimonialModel.dart';
-import 'package:milesed/services/apiServices.dart';
 
 class DataBloc extends Bloc<DataEvent, DataState> {
-  final Apiservices serviceRepo = Apiservices();
   DataBloc() : super(HomeDataInit()) {
     on<GetHomeData>((event, emit) async {
       emit(HomeDataloading());
       try {
-        final HomeDataModel data = await serviceRepo.getHomeData();
-                print("testimonial data loaded");
+        final String jsonString =
+            await rootBundle.loadString('assets/data/homepage.json');
+        final HomeDataModel data =
+            HomeDataModel.fromMap(json.decode(jsonString));
+        print("Home data loaded ");
 
         emit(HomeDataloaded(data: data));
       } catch (e) {
         emit(HomeDataError(err: e.toString()));
       }
     });
-   
   }
 }
 
-
-
-
 class TestimonialDataBloc extends Bloc<DataEvent, DataState> {
-  final Apiservices serviceRepo = Apiservices();
   TestimonialDataBloc() : super(TestimonialDataInit()) {
- 
     on<GetTestimonialData>((event, emit) async {
       emit(TestimonialDataloading());
       try {
-        final TestimonialsModal data = await serviceRepo.getTestimonalData();
+        final String jsonString =
+            await rootBundle.loadString('assets/data/testimonials.json');
+        final TestimonialsModal data =
+            TestimonialsModal.fromMap(json.decode(jsonString));
+
         print("testimonial data loaded");
         emit(TestimonialDataloaded(data: data));
       } catch (e) {

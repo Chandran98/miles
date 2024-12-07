@@ -49,6 +49,7 @@
 				}
 			]
 		},
+
 		{
 			"id": "759aed6e-a2ab-4bcf-b460-8836bd9cce5c",
 			"block_type": "reels",
@@ -197,6 +198,8 @@
 				}
 			]
 		},
+
+		
 		{
 			"id": "0f6dbfe6-5617-4a19-9f4c-4173bd8bd817",
 			"block_type": "cta",
@@ -246,6 +249,7 @@
 				}
 			]
 		},
+
 		{
 			"id": "757318fe-f485-47ee-8e77-7d0ed6017903",
 			"block_type": "events",
@@ -427,6 +431,7 @@
 				}
 			]
 		},
+
 		{
 			"id": "96bf9072-aa0f-48be-839c-c2f8a66030c5",
 			"block_type": "inshorts",
@@ -575,6 +580,7 @@
 				}
 			]
 		},
+		
 		{
 			"id": "b4de6a32-e6ce-43d7-b85b-3824623a0440",
 			"block_type": "masterclass",
